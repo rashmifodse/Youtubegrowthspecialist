@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashmi Phodse – YouTube Growth Plan</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #e8e8e8;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .slide {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto 28px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* COVER */
+  .cover {
+    background: #0c0c0c;
+    padding: 60px 60px 52px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blob1 {
+    position: absolute;
+    width: 340px; height: 340px;
+    background: radial-gradient(circle, rgba(255,50,50,0.16) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -80px; right: -60px;
+    pointer-events: none;
+  }
+
+  .blob2 {
+    position: absolute;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,50,50,0.07) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: 20px; left: 60px;
+    pointer-events: none;
+  }
+
+  .cover-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 6px 14px;
+    width: fit-content;
+    font-size: 12px;
+    color: #777;
+  }
+
+  .red-dot { width: 6px; height: 6px; background: #ff3333; border-radius: 50%; }
+
+  .cover-center { position: relative; z-index: 1; }
+
+  .cover-name {
+    font-size: 13px;
+    color: #ff3333;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  .cover-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+
+  .cover-title .red { color: #ff3333; }
+
+  .cover-desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    max-width: 440px;
+  }
+
+  .cover-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: 1px solid #1c1c1c;
+    padding-top: 22px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-person { display: flex; flex-direction: column; gap: 3px; }
+  .cp-name { font-size: 15px; color: #fff; font-weight: 600; }
+  .cp-role { font-size: 12px; color: #444; }
+
+  .cover-chips { display: flex; gap: 10px; }
+
+  .chip {
+    background: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 8px 14px;
+    text-align: center;
+  }
+
+  .chip-val { font-size: 13px; color: #fff; font-weight: 600; }
+  .chip-label { font-size: 10px; color: #444; margin-top: 2px; }
+
+  /* BAR */
+  .bar {
+    background: #ff3333;
+    padding: 13px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .bar-title { font-size: 11px; font-weight: 700; color: #fff; letter-spacing: 1.8px; text-transform: uppercase; }
+  .bar-num { font-size: 11px; color: rgba(255,255,255,0.45); }
+
+  /* BODY */
+  .body {
+    padding: 38px 48px 46px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s-heading { font-size: 28px; font-weight: 700; color: #0c0c0c; line-height: 1.2; margin-bottom: 7px; }
+  .s-heading .red { color: #ff3333; }
+  .s-intro { font-size: 13px; color: #999; line-height: 1.7; margin-bottom: 28px; max-width: 580px; }
+
+  /* PROOF */
+  .proof-channel {
+    background: #fafafa;
+    border: 1.5px solid #eee;
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+  }
+
+  .pc-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ff3333;
+    margin-bottom: 14px;
+  }
+
+  .proof-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .proof-img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f0f0f0;
+    aspect-ratio: 16/8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .proof-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .proof-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .ps {
+    background: #fff;
+    border: 1.5px solid #eee;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+
+  .ps-val { font-size: 18px; font-weight: 700; color: #0c0c0c; }
+  .ps-label { font-size: 10px; color: #aaa; margin-top: 3px; }
+
+  .proof-bottom {
+    background: #0c0c0c;
+    border-radius: 12px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pb-icon { font-size: 20px; flex-shrink: 0; }
+  .pb-text { font-size: 13px; color: #666; line-height: 1.6; }
+  .pb-text strong { color: #fff; }
+
+  /* PHASES */
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 14px;
+  }
+
+  .phase { border-radius: 14px; padding: 20px 18px; }
+  .ph1 { background: #fff5f5; border: 1.5px solid #ffd6d6; }
+  .ph2 { background: #fff8f0; border: 1.5px solid #ffddb3; }
+  .ph3 { background: #f0fff4; border: 1.5px solid #b3f0c8; }
+
+  .ph-week { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+  .ph1 .ph-week { color: #ff3333; }
+  .ph2 .ph-week { color: #e8820c; }
+  .ph3 .ph-week { color: #1f9e4a; }
+
+  .ph-title { font-size: 16px; font-weight: 700; color: #0c0c0c; margin-bottom: 12px; }
+
+  .ph-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .ph-list li { font-size: 12px; color: #555; line-height: 1.5; display: flex; gap: 7px; align-items: flex-start; }
+  .ph-list li::before { content: '·'; font-size: 18px; line-height: 1; flex-shrink: 0; }
+  .ph1 .ph-list li::before { color: #ff3333; }
+  .ph2 .ph-list li::before { color: #e8820c; }
+  .ph3 .ph-list li::before { color: #1f9e4a; }
+
+  .ph-result {
+    margin-top: 14px;
+    padding-top: 12px;
+  }
+
+  .ph1 .ph-result { border-top: 1px solid #ffd6d6; }
+  .ph2 .ph-result { border-top: 1px solid #ffddb3; }
+  .ph3 .ph-result { border-top: 1px solid #b3f0c8; }
+
+  .ph-result-label { font-size: 10px; font-weight: 700; margin-bottom: 4px; }
+  .ph1 .ph-result-label { color: #ff3333; }
+  .ph2 .ph-result-label { color: #e8820c; }
+  .ph3 .ph-result-label { color: #1f9e4a; }
+
+  .ph-result-text { font-size: 11px; color: #888; line-height: 1.5; }
+
+  .deliverable {
+    background: #0c0c0c;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .del-icon { font-size: 18px; flex-shrink: 0; }
+  .del-text { font-size: 12px; color: #666; line-height: 1.6; }
+  .del-text strong { color: #fff; }
+
+  /* CLOSING SLIDE */
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin-bottom: 18px;
+  }
+
+  .why-card {
+    background: #fafafa;
+    border: 1.5px solid #eee;
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+
+  .why-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #ff3333; margin-bottom: 7px; }
+  .why-title { font-size: 14px; font-weight: 700; color: #0c0c0c; margin-bottom: 7px; }
+  .why-body { font-size: 12px; color: #888; line-height: 1.7; }
+
+  .closing {
+    background: #0c0c0c;
+    border-radius: 14px;
+    padding: 26px 32px;
+    text-align: center;
+  }
+
+  .closing h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 7px; }
+  .closing p { font-size: 13px; color: #555; line-height: 1.7; max-width: 500px; margin: 0 auto; }
+  .closing p strong { color: #999; }
+
+  .print-btn {
+    display: block;
+    margin: 0 auto 28px;
+    padding: 12px 34px;
+    background: #ff3333;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+
+  .print-btn:hover { background: #cc0000; }
+
+  @media print {
+    body { background: #fff; }
+    .slide { border-radius: 0; margin: 0; box-shadow: none; }
+    .print-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Save as PDF</button>
+
+<!-- SLIDE 1: COVER -->
+<div class="slide">
+  <div class="cover">
+    <div class="blob1"></div>
+    <div class="blob2"></div>
+    <div class="cover-eyebrow">
+      <div class="red-dot"></div>
+      YouTube Growth Plan — First 30 Days
+    </div>
+    <div class="cover-center">
+      <div class="cover-name">Rashmi Phodse</div>
+      <div class="cover-title">Here's what I'll do<br>in your <span class="red">first 30 days.</span></div>
+      <div class="cover-desc">A clear, simple plan to bring your channel back to consistent growth — and build the foundation for 1 million subscribers.</div>
+    </div>
+    <div class="cover-footer">
+      <div class="cover-person">
+        <div class="cp-name">Rashmi Phodse</div>
+        <div class="cp-role">YouTube Growth Specialist</div>
+      </div>
+      <div class="cover-chips">
+        <div class="chip">
+          <div class="chip-val">5M+</div>
+          <div class="chip-label">Views Managed</div>
+        </div>
+        <div class="chip">
+          <div class="chip-val">2 Channels</div>
+          <div class="chip-label">Built & Grown</div>
+        </div>
+        <div class="chip">
+          <div class="chip-val">₹2L+</div>
+          <div class="chip-label">Revenue Generated</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 2: PROOF -->
+<div class="slide">
+  <div class="bar">
+    <span class="bar-title">My Track Record</span>
+    <span class="bar-num">02 / 04</span>
+  </div>
+  <div class="body">
+    <div class="s-heading">Real channels. <span class="red">Real numbers.</span></div>
+    <div class="s-intro">Two YouTube channels. Both grown with data and a clear strategy. Here's what the results look like.</div>
+
+    <!-- Channel 1 -->
+    <div class="proof-channel">
+      <div class="pc-label">Swagat Properties — Sales Channel · Last 365 Days</div>
+      <div class="proof-row">
+        <div class="proof-img" id="img1">
+          <span style="font-size:12px;color:#bbb;">📊 Screenshot loading...</span>
+        </div>
+        <div class="proof-stats">
+          <div class="ps"><div class="ps-val">3.3M</div><div class="ps-label">Views</div></div>
+          <div class="ps"><div class="ps-val">7.8%</div><div class="ps-label">CTR</div></div>
+          <div class="ps"><div class="ps-val">70%</div><div class="ps-label">Primary Lead Source</div></div>
+          <div class="ps"><div class="ps-val">₹2L+</div><div class="ps-label">Revenue</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel 2 -->
+    <div class="proof-channel">
+      <div class="pc-label">Swagat Properties — Rental Channel · Last 365 Days · Built from Zero</div>
+      <div class="proof-row">
+        <div class="proof-img" id="img2">
+          <span style="font-size:12px;color:#bbb;">📊 Screenshot loading...</span>
+        </div>
+        <div class="proof-stats">
+          <div class="ps"><div class="ps-val">354.6K</div><div class="ps-label">Views</div></div>
+          <div class="ps"><div class="ps-val">7.1%</div><div class="ps-label">CTR</div></div>
+          <div class="ps"><div class="ps-val">2.3K</div><div class="ps-label">Subscribers</div></div>
+          <div class="ps"><div class="ps-val">&lt;1 yr</div><div class="ps-label">To Monetise</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof-bottom">
+      <div class="pb-icon">📌</div>
+      <div class="pb-text">Started with <strong>500 subscribers and 200–300 views per video.</strong> Two years later — <strong>₹2L+ revenue and YouTube became the #1 lead source.</strong> The rental channel went from zero to monetised in under a year.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 3: 30-DAY PLAN -->
+<div class="slide">
+  <div class="bar">
+    <span class="bar-title">The 30-Day Plan</span>
+    <span class="bar-num">03 / 04</span>
+  </div>
+  <div class="body">
+    <div class="s-heading">30 days. <span class="red">Clear steps. Real results.</span></div>
+    <div class="s-intro">Here's exactly what I'll focus on — and what you'll see by the end of each week.</div>
+
+    <div class="phases">
+      <div class="phase ph1">
+        <div class="ph-week">Week 1</div>
+        <div class="ph-title">Audit</div>
+        <ul class="ph-list">
+          <li>Full channel and content audit</li>
+          <li>Identify top revamp candidates</li>
+          <li>Audience and competitor research</li>
+          <li>Define 3 content pillars</li>
+        </ul>
+        <div class="ph-result">
+          <div class="ph-result-label">YOU'LL SEE</div>
+          <div class="ph-result-text">A clear picture of what's working and the exact plan for weeks 2–4.</div>
+        </div>
+      </div>
+
+      <div class="phase ph2">
+        <div class="ph-week">Week 2 – 3</div>
+        <div class="ph-title">Revamp & Optimise</div>
+        <ul class="ph-list">
+          <li>Revamp top 5–8 existing videos</li>
+          <li>Full metadata refresh across library</li>
+          <li>New thumbnails on low-CTR videos</li>
+          <li>End screens and internal linking</li>
+        </ul>
+        <div class="ph-result">
+          <div class="ph-result-label">YOU'LL SEE</div>
+          <div class="ph-result-text">Improved CTR and watch time on existing videos within 10–14 days.</div>
+        </div>
+      </div>
+
+      <div class="phase ph3">
+        <div class="ph-week">Week 4</div>
+        <div class="ph-title">Create & Launch</div>
+        <ul class="ph-list">
+          <li>2 new videos live — built on research</li>
+          <li>Weekly content workflow ready</li>
+          <li>Performance tracking set up</li>
+          <li>60-day roadmap delivered</li>
+        </ul>
+        <div class="ph-result">
+          <div class="ph-result-label">YOU'LL SEE</div>
+          <div class="ph-result-text">2 published videos, a working content system, and early growth signals.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deliverable" style="margin-bottom:10px;">
+      <div class="del-icon">🎯</div>
+      <div class="del-text"><strong>By day 30:</strong> Revamped library, 2 new videos live, 3 content pillars ready, and a 60-day roadmap focused on consistent growth toward 1 million.</div>
+    </div>
+
+    <div class="deliverable">
+      <div class="del-icon">💡</div>
+      <div class="del-text"><strong>Bigger picture:</strong> As the channel grows, the focus shifts to moving viewers from educational content into your programs and services — so YouTube becomes a sales channel, not just a content platform.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SLIDE 4: CLOSING -->
+<div class="slide">
+  <div class="bar">
+    <span class="bar-title">What I Noticed About Your Channel</span>
+    <span class="bar-num">04 / 04</span>
+  </div>
+  <div class="body">
+    <div class="s-heading">I looked at your channel <span class="red">before today.</span></div>
+    <div class="s-intro">These four things stood out — and they're exactly what I'd focus on fixing first.</div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-tag">Observation 01</div>
+        <div class="why-title">28M views, but 46K subscribers</div>
+        <div class="why-body">Millions watched but didn't subscribe. The content attracts viewers — it just needs stronger hooks and calls to action to convert them.</div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-tag">Observation 02</div>
+        <div class="why-title">Best video is 9 years old</div>
+        <div class="why-body">That's a discoverability problem, not a content problem. Recent videos aren't getting reach because the channel's signals have weakened. That's fixable.</div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-tag">Observation 03</div>
+        <div class="why-title">10 years of content is a head start</div>
+        <div class="why-body">There are videos in that library that can reach a much bigger audience today — with updated titles, thumbnails and metadata. That's where I'd start before creating anything new.</div>
+      </div>
+
+      <div class="why-card">
+        <div class="why-tag">Observation 04</div>
+        <div class="why-title">200–800 views with 46K subscribers</div>
+        <div class="why-body">That gap tells me YouTube has stopped recommending the channel. Rebuilding those signals is the priority — and it's exactly what I've done before.</div>
+      </div>
+    </div>
+
+    <div class="closing">
+      <h3>I'm genuinely excited about this channel.</h3>
+      <p>There's real potential here — <strong>28 million views don't lie.</strong> The audience exists. I'd love the opportunity to bring it back.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
